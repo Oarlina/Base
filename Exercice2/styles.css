@@ -1,0 +1,35 @@
+/*      J'initalise les margins et paddings de ma page*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: beige;
+    .carres{
+        height: 100vh;
+        display: flex;
+        flex-direction: row; /* pour que les carre soit aligner de gauche a droite */
+        justify-content: center; /* centre les carres horizontalement */
+        align-items: center; /* centre les carres verticalement*/
+
+        .carre{
+            height: 200px;
+            width: 200px;
+            margin: 0 2px 0 2px;
+        }
+        #cyan{
+            background-color: cyan;
+        }
+        #maroon{
+            background-color: maroon;
+        }
+        #vert{
+            background-color: green;
+        }
+        #jaune{
+            background-color: yellow;
+        }
+    }
+}
