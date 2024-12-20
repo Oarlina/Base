@@ -7,18 +7,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="carres" id="carres">
-        <div class="carre" id="cyan" onclick="cyan()"></div>
-        <div class="carre" id="maroon" onclick="maroon()"></div>
-        <div class="carre" id="vert" onclick="vert()"></div>
-        <div class="carre" id="jaune" onclick="jaune()"></div>
+    <div class="carres">
+        <div class="carre" id="cyan" onclick="clique('cyan')"></div> <!-- le onclick('id') me permet de renvoyer l'id a la fonction clique-->
+        <div class="carre" id="maroon" onclick="clique('maroon')"></div> <!-- le onclick('id') me permet de renvoyer l'id a la fonction clique-->
+        <div class="carre" id="vert" onclick="clique('vert')"></div> <!-- le onclick('id') me permet de renvoyer l'id a la fonction clique-->
+        <div class="carre" id="jaune" onclick="clique('jaune')"></div> <!-- le onclick('id') me permet de renvoyer l'id a la fonction clique-->
     </div>
-    <div class="copie">
-        
+    <div class="carres">
+        <div class="carre" id="copie"></div>
     </div>
-    <!-- <div class="carre copieur"></div> -->
-
-
     <script src="index.js"></script>
 </body>
 </html>

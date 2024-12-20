@@ -5,19 +5,23 @@
     box-sizing: border-box;
 }
 
+body, .carres, #copie{
+    display: flex;
+    justify-content: center; /* centre les carres horizontalement */
+    align-items: center; /* centre les carres verticalement*/
+}
+
 body{
     background-color: beige;
+    height: 100vh;
+    flex-direction: column; /* pour que les carre soit aligner de gauche a droite */
     .carres{
-        height: 100vh;
-        display: flex;
         flex-direction: row; /* pour que les carre soit aligner de gauche a droite */
-        justify-content: center; /* centre les carres horizontalement */
-        align-items: center; /* centre les carres verticalement*/
 
         .carre{
             height: 200px;
             width: 200px;
-            margin: 0 2px 0 2px;
+            margin: 2px;
         }
         #cyan{
             background-color: cyan;
@@ -30,6 +34,9 @@ body{
         }
         #jaune{
             background-color: yellow;
+        }
+        #copie{
+            font-size: larger;
         }
     }
 }
