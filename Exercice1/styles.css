@@ -1,0 +1,26 @@
+/*       J'initialise les margins et paddings*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: grey;
+    height: 100vh; /* je met la hauteur a la taille de l'ecran*/
+    display: flex;
+    align-items: center; /* centre le texte verticalement*/
+    justify-content: center; /* centre le texte horizontalement*/
+    #carre{
+        background-color: green;
+        color: white;
+        width: 200px;
+        height: 200px;
+        font-family: 'Times New Roman'; /* on met la police Time New Roman*/
+        font-size: 40px; /* On met une police de 40 pixels */
+        display: flex;
+        align-items: center; /* centre le texte verticalement*/
+        justify-content: center; /* centre le texte horizontalement*/
+    }
+}
