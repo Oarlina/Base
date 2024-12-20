@@ -5,10 +5,11 @@
     box-sizing: border-box;
 }
 
-body, .carres, #copie{
+body, .carres,#un,#deux,#trois,#quatre{
     display: flex;
     justify-content: center; /* centre les carres horizontalement */
     align-items: center; /* centre les carres verticalement*/
+    
 }
 
 body{
@@ -16,27 +17,23 @@ body{
     height: 100vh;
     flex-direction: column; /* pour que les carre soit aligner de gauche a droite */
     .carres{
+        width: 450px;
         flex-direction: row; /* pour que les carre soit aligner de gauche a droite */
+        flex-wrap: wrap;
 
         .carre{
             height: 200px;
             width: 200px;
             margin: 2px;
-        }
-        #cyan{
-            background-color: cyan;
-        }
-        #maroon{
-            background-color: maroon;
-        }
-        #vert{
             background-color: green;
-        }
-        #jaune{
-            background-color: yellow;
-        }
-        #copie{
-            font-size: 30px;
+            color: white;
+            font-size: x-large;
         }
     }
 }
+.styleToggle{
+    rotate: 360deg;
+    transition: 0.5s ease-in-out;
+    background-color: red !important; /* je lui dit que passer cette ligne avant le background green*/
+    scale: 0.9;
+    }
