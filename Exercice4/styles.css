@@ -1,0 +1,46 @@
+/*      J'initalise les margins et paddings de ma page*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(204, 204, 200);
+    justify-items: center; /* centre les elements horizontalement */
+    h1{
+        color:white;
+        text-align: center; /*centre le texte horizontalement */
+        margin: 2em;
+        font-size: xxx-large;
+        width: 100%;
+    }
+    .icons{
+        display: flex;
+        flex-direction: row; /* j'afficher les elments de la gauche vers la droite */
+        text-align: center; /* j'aligne le texte horizontalement */
+        justify-items: center;
+        height: 20em;
+        width: 80%;
+    }
+    .icon{
+        height: 100%;
+        width: 38%;
+        margin-right: 3em;
+    }
+
+    .fa-brands{
+       font-size:150px;
+       color:white;
+    }
+    .facebook{
+        background-color: blue;
+    }
+    .x{
+        background-color: lightblue;
+    }
+    .insta{
+        background-color: rgb(225, 0, 255);
+    }
+
+}
