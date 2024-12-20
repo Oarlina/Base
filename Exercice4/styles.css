@@ -27,6 +27,9 @@ body{
         height: 100%;
         width: 38%;
         margin-right: 3em;
+        display: flex;
+        align-items: center; /* centre les items verticalement */
+        justify-content: center; /* centre horizontalement */
     }
 
     .fa-brands{
