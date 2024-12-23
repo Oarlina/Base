@@ -1,4 +1,4 @@
-console.log("yes"); // je teste si j'ai reussi a lier js et html
+// console.log("yes"); // je teste si j'ai reussi a lier js et html
 
 
 for (let quote in quotes) 
@@ -13,7 +13,7 @@ for (let quote in quotes)
     q.className = "text"; // je donne a la citation la class text (gerer en css)
     p.className = "auteur"; // je donne au paragraphe la class auteur (gerer en css)
     favori.className = "favori"; // je donne a la div la class favori (gerer en css)
-    favori.id = "non"; // je donne a la div l'id non 
+    favori.classList.add("non"); // je rajoute une class a favori 
     
     titre= document.createTextNode(quotes[quote]); // je rajoute du textre au premier paragraphe
     q.appendChild(titre); // je met la citation dans un paragraphe
@@ -29,20 +29,31 @@ for (let quote in quotes)
     
     document.body.appendChild(div); // je rajoute la div au body
 }
+
 var citations = document.querySelectorAll(".citation");  // je recupere un tableau de toutes les citations
-citations.forEach(citation => {
-    var ic = citation.children(".favori");
-    console.log(citation.id);
-    favori.addEventListener("click", function(){
-        if (favori.id == "non")
+citations.forEach(citation => 
+{ // je parcours le tableau des citations
+    var enfant = citation.children[2].children[0]; // je déclare l'enfant de citation: le i
+    var enfantDiv = citation.children[2]; // je declare l'enfant de citation: div
+
+    if (localStorage.getItem(citation.children[1].textContent) !== null) //si l'element est dans le local storage
+    {
+        enfant.classList ="fa-solid fa-heart"; // je change le coeur en favori
+    }
+
+    enfant.addEventListener("click", function()
+    { // je rajoute un evenement a enfant
+        if (enfantDiv.className == "favori non") // si la div enfant a comme class non
             {
-                favori.innerHTML = "<i class='fa-solid fa-heart'></i>";
-                favori.id = "oui";
-            }else 
+                enfant.classList ="fa-solid fa-heart"; // je change le coeur
+                enfantDiv.className = "favori oui"; // je change la class
+                localStorage.setItem(citation.children[1].textContent, citation.children[0].textContent); // je rajout l'auteur et le texte dans le local storage
+            }else //sinon
             {
-                favori.innerHTML = "<i class='fa-regular fa-heart'></i>";
-                favori.id="non";
+                enfant.classList = "fa-regular fa-heart"; // je change le coeur
+                enfantDiv.className="favori non"; // je change la class
+                localStorage.removeItem(citation.children[1].textContent); // je supprime la citation avec l'auteur
             }
     }); // j'ajoute une fonction click pour mettre un like
 });
-
+    
