@@ -1,3 +1,4 @@
+/*      J'initalise les margins et paddings de ma page*/
 *{
     margin: 0;
     padding: 0;
@@ -6,4 +7,52 @@
 
 body{
     background-color: beige;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/*      Je fais le css d'une citation*/
+.citation{ 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: white; /* je met un fond blanc*/
+    width: fit-content; /* la longueur est selon les elements enfants*/
+    max-width: 80%; /* la longueur max est de 80% duy body*/
+    height: fit-content; /* la hauteur est selon les elements enfants*/
+
+    margin: 10px;
+    border-radius: 20px; /* j'arrondi les bords de 20 pixels*/
+    box-shadow: 0 0 10px gray; /* je met une ombre a la citation*/
+
+    .text{
+        width: 100%;
+        font-size: x-large;
+        padding: 15px;
+    }
+    
+    .auteur{
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        justify-content: end;
+    }
+
+    .favori{
+        height: 2em;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+    i{
+        height: 2em;
+        width: 2em;
+    }
+}
+.favoris{
+    max-width: 80%;
+    width: 80em;
+    height: 10em;
+    background-color: aqua;
 }
